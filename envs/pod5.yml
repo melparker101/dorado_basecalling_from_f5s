@@ -1,0 +1,12 @@
+name: pod5 
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
+dependencies:
+  - python=3.7
+  - pip
+  - pip:
+    - pod5
+
+

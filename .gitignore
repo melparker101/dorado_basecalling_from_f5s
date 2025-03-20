@@ -1,0 +1,6 @@
+data/f5s*
+trace*
+report*
+output*
+work*
+.nextflow*
