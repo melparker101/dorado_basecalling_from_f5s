@@ -12,7 +12,7 @@ for batch in "${batch_list[@]}"; do
   echo "$batch"
 
   nextflow run https://github.com/oxfordmmm/dorado_basecalling_from_f5s \
-        -r -r main \
+        -r main \
         --input_f5s \
         --batch "$batch" \
         -resume \
