@@ -17,6 +17,7 @@ process FAST5_TO_POD5 {
     pod5 convert fast5 reads.fast5 --output ${sample}.pod5 
     # --one-to-one ./input/  # Don't need this are we are running in parallel
     """ 
+    
     stub:
     """
     touch ${sample}.pod5
