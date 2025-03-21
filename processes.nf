@@ -36,6 +36,12 @@ process DOWNLOAD_BINARIES {
     tar -xzf *.tar.gz
     rm -rf *.tar.gz
     """
+    
+    stub:
+    """
+    mkdir -p dorado-0.8.1-linux-x64
+    """
+
 }
 
 process DOWNLOAD_MODEL {
@@ -50,11 +56,18 @@ process DOWNLOAD_MODEL {
     script:
     """
     mkdir -p dorado_models
+    
     ${dorado}/bin/dorado download --model ${params.model_4000hz} --models-directory dorado_models
     ${dorado}/bin/dorado download --model ${params.model_5000hz} --models-directory dorado_models
     
     # For more general use, use this instead
-    # dorado download --model all --models-directory dorado_models
+    # ${dorado}/bin/dorado download --model all --models-directory dorado_models
+    """
+
+    stub:
+    """
+    mkdir -p dorado_models/dna_r10.4.1_e8.2_400bps_sup@v4.1.0
+    mkdir -p dorado_models/dna_r10.4.1_e8.2_400bps_sup@v5.0.0
     """
 }
 
