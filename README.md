@@ -2,7 +2,7 @@
 Basecalling using [Dorado](https://github.com/nanoporetech/dorado): f5s to fqs. 
 
 This is a simple Nextflow pipeline which uses Dorado to perform basecalling. 
-- It takes fast5 files as input and outputs fastq files. 
+- It takes **fast5** files as input and outputs **fastq** files. 
 - It runs on BMRC computer cluster.
 - It does not perform merging of files and instead runs each smaller file in parallel. Merging of fastq files can be performed manually afterwards if required.
 - Some BMRC GPUs are outdated and are not compatible with Dorado - for Dorado v0.8.1, a constraint of v100 or a100 is used in the [nextflow.config](https://github.com/oxfordmmm/dorado_basecalling_from_f5s/blob/main/nextflow.config) file (see [BMRC GPU resources](https://www.medsci.ox.ac.uk/for-staff/resources/bmrc/gpu-resources) for more information on BMRC GPUs).
