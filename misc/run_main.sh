@@ -20,4 +20,8 @@ for batch in "${batch_list[@]}"; do
         --input_f5s "data/f5s/$batch" \
         -with-report -with-trace -profile conda,bmrc
 done
+
+mkdir -p reports
+mv trace-* reports/
+mv report-* reports/
  
