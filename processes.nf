@@ -42,7 +42,6 @@ process DOWNLOAD_BINARIES {
     """
     mkdir -p dorado-0.8.1-linux-x64
     """
-
 }
 
 process DOWNLOAD_MODEL {
